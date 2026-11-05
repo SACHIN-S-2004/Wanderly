@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly | Discover More. Travel Further.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="main-nav" class="navbar">
+        <div class="nav-container">
+            <div class="logo">Wanderly.</div>
+            <nav class="nav-links">
+                <a href="#discover">Discover</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#journal">The Edit</a>
+                <a href="#packages">Journeys</a>
+            </nav>
+            <button class="btn-primary open-modal" data-target="general">Plan Your Trip</button>
+            <div class="menu-toggle">
+                <span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section A: Immersive Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg clip-reveal">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80" alt="Cinematic Mountains">
+            </div>
+            <div class="hero-content">
+                <div class="hero-text-wrap">
+                    <h1 class="stagger-text">THE WORLD IS YOURS<br>TO WANDER.</h1>
+                    <p class="fade-up delay-1">Some journeys take you places. Others leave you with stories that last forever. Find the journey that speaks to you.</p>
+                </div>
+                <div class="hero-actions fade-up delay-2">
+                    <a href="#destinations" class="btn-primary">Discover Destinations</a>
+                    <a href="#finder" class="btn-secondary">Find Your Journey</a>
+                </div>
+                <div class="coordinates fade-up delay-3">46.8182° N, 8.2275° E</div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Section B: Discover By Experience -->
+        <section id="discover" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2>HOW DO YOU WANT TO FEEL?</h2>
+                </div>
+                <div class="experience-grid">
+                    <div class="exp-nav fade-up">
+                        <button class="exp-tab active" data-exp="tropical">Tropical Escapes</button>
+                        <button class="exp-tab" data-exp="mountain">Mountain Retreats</button>
+                        <button class="exp-tab" data-exp="desert">Desert Adventures</button>
+                        <button class="exp-tab" data-exp="cultural">Cultural Journeys</button>
+                    </div>
+                    <div class="exp-content fade-up delay-1" id="exp-display">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Destination Stories -->
+        <section id="destinations" class="section-padding bg-forest text-light">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="text-beige">THE PLACES THAT STAY WITH YOU.</h2>
+                </div>
+                <div class="editorial-grid">
+                    <!-- Bali -->
+                    <div class="story-card style-1 fade-up">
+                        <div class="story-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
+                        </div>
+                        <div class="story-meta">
+                            <h3>Bali, Indonesia</h3>
+                            <p>A spiritual haven where emerald terraces meet the surf. Find your balance.</p>
+                            <button class="btn-text open-modal" data-target="Bali">Explore / Plan</button>
+                        </div>
+                    </div>
+                    <!-- Dubai -->
+                    <div class="story-card style-2 fade-up delay-1">
+                        <div class="story-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai">
+                        </div>
+                        <div class="story-meta">
+                            <h3>Dubai, UAE</h3>
+                            <p>Architectural marvels carved from the desert sands. The future of luxury.</p>
+                            <button class="btn-text open-modal" data-target="Dubai">Explore / Plan</button>
+                        </div>
+                    </div>
+                    <!-- Maldives -->
+                    <div class="story-card style-3 fade-up">
+                        <div class="story-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives">
+                        </div>
+                        <div class="story-meta">
+                            <h3>Maldives</h3>
+                            <p>Atolls of pure tranquility. Where the ocean becomes your private sanctuary.</p>
+                            <button class="btn-text open-modal" data-target="Maldives">Explore / Plan</button>
+                        </div>
+                    </div>
+                    <!-- Switzerland -->
+                    <div class="story-card style-4 fade-up delay-1">
+                        <div class="story-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Switzerland">
+                        </div>
+                        <div class="story-meta">
+                            <h3>Switzerland</h3>
+                            <p>Alpine majesty and crystalline lakes. The peak of natural elegance.</p>
+                            <button class="btn-text open-modal" data-target="Switzerland">Explore / Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: The Travel Edit -->
+        <section id="journal" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="eyebrow">CURATED</span>
+                    <h2>THE TRAVEL EDIT.</h2>
+                </div>
+                <div class="edit-grid">
+                    <article class="edit-item fade-up">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80" alt="Hidden Places">
+                        <div class="edit-content">
+                            <h4>Hidden Places Worth Discovering</h4>
+                            <p>Step away from the crowds and find solitude in these untouched corners of the earth.</p>
+                            <a href="#" class="read-more">Read Story</a>
+                        </div>
+                    </article>
+                    <article class="edit-item fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80" alt="Travel Season">
+                        <div class="edit-content">
+                            <h4>Where to Travel This Season</h4>
+                            <p>Our editor's picks for the perfect climate, fewer crowds, and vibrant local festivals right now.</p>
+                            <a href="#" class="read-more">Read Story</a>
+                        </div>
+                    </article>
+                    <article class="edit-item fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1504150558240-1bdf2a076757?auto=format&fit=crop&w=600&q=80" alt="Experiences">
+                        <div class="edit-content">
+                            <h4>Experiences You Shouldn't Miss</h4>
+                            <p>From dining under the stars to ancient trail hiking—moments that define a lifetime.</p>
+                            <a href="#" class="read-more">Read Story</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: Find Your Journey -->
+        <section id="finder" class="section-padding bg-beige">
+            <div class="container interactive-finder fade-up">
+                <h2>YOUR NEXT ADVENTURE STARTS HERE.</h2>
+                <form id="journey-finder-form" class="finder-form">
+                    <div class="form-group">
+                        <label>Experience</label>
+                        <select id="find-exp">
+                            <option value="tropical">Tropical Escape</option>
+                            <option value="mountain">Mountain Retreat</option>
+                            <option value="desert">Desert Adventure</option>
+                            <option value="cultural">Cultural Journey</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget</label>
+                        <select id="find-budget">
+                            <option value="1">Under ₹30,000</option>
+                            <option value="2">₹30,000–₹60,000</option>
+                            <option value="3">₹60,000–₹1,00,000</option>
+                            <option value="4">Above ₹1,00,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Duration</label>
+                        <select id="find-duration">
+                            <option value="weekend">Weekend</option>
+                            <option value="short">3–5 days</option>
+                            <option value="med">6–8 days</option>
+                            <option value="long">9+ days</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Find Matches</button>
+                </form>
+                <div id="finder-results" class="finder-results"></div>
+            </div>
+        </section>
+
+        <!-- Section F: Curated Packages -->
+        <section id="packages" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2>JOURNEYS, THOUGHTFULLY CURATED.</h2>
+                </div>
+                <div class="packages-list">
+                    <!-- Package 1 -->
+                    <div class="package-row fade-up">
+                        <div class="pkg-num">01.</div>
+                        <div class="pkg-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80" alt="Island Escape">
+                        </div>
+                        <div class="pkg-details">
+                            <h3>Island Escape</h3>
+                            <p class="pkg-meta">Maldives &mdash; 5 Days / 4 Nights</p>
+                            <p class="pkg-price">From ₹45,000 <span>/ person</span></p>
+                        </div>
+                        <button class="btn-secondary open-modal" data-target="Island Escape - Maldives">Explore Package</button>
+                    </div>
+                    <!-- Package 2 -->
+                    <div class="package-row fade-up">
+                        <div class="pkg-num">02.</div>
+                        <div class="pkg-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Desert & Beyond">
+                        </div>
+                        <div class="pkg-details">
+                            <h3>Desert & Beyond</h3>
+                            <p class="pkg-meta">Dubai &mdash; 4 Days / 3 Nights</p>
+                            <p class="pkg-price">From ₹32,000 <span>/ person</span></p>
+                        </div>
+                        <button class="btn-secondary open-modal" data-target="Desert & Beyond - Dubai">Explore Package</button>
+                    </div>
+                    <!-- Package 3 -->
+                    <div class="package-row fade-up">
+                        <div class="pkg-num">03.</div>
+                        <div class="pkg-img img-zoom">
+                            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=600&q=80" alt="Alpine Discovery">
+                        </div>
+                        <div class="pkg-details">
+                            <h3>Alpine Discovery</h3>
+                            <p class="pkg-meta">Switzerland &mdash; 7 Days / 6 Nights</p>
+                            <p class="pkg-price">From ₹85,000 <span>/ person</span></p>
+                        </div>
+                        <button class="btn-secondary open-modal" data-target="Alpine Discovery - Switzerland">Explore Package</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section G: Why Wanderly -->
+        <section id="why-us" class="section-padding bg-sage text-forest">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2>MORE THAN A DESTINATION.<br>IT'S THE EXPERIENCE.</h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-item fade-up">
+                        <span class="huge-number">I.</span>
+                        <h4>Best Travel Deals</h4>
+                        <p>Exclusive partnerships allow us to offer premium experiences at unparalleled value, ensuring luxury remains accessible.</p>
+                    </div>
+                    <div class="benefit-item fade-up delay-1">
+                        <span class="huge-number">II.</span>
+                        <h4>Handpicked Destinations</h4>
+                        <p>Every location is rigorously vetted by our editorial team to guarantee it meets our standards of beauty and culture.</p>
+                    </div>
+                    <div class="benefit-item fade-up delay-2">
+                        <span class="huge-number">III.</span>
+                        <h4>24/7 Support</h4>
+                        <p>Your peace of mind is our priority. Our concierges are available around the clock to assist you anywhere on the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section H: Final CTA -->
+        <section id="final-cta" class="section-padding bg-forest text-ivory text-center">
+            <div class="container final-cta-wrap fade-up" style="color: wheat;">
+                <h2>THERE'S A WHOLE WORLD WAITING.</h2>
+                <p>Your next unforgettable story is just one journey away.</p>
+                <button class="btn-primary open-modal" data-target="general">Plan Your Trip</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-charcoal text-beige">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Wanderly.</h3>
+                <p>Discover More. Travel Further.</p>
+                <p class="footer-desc">An immersive digital travel journal and boutique agency crafting stories that last a lifetime.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#discover">Discover</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#journal">The Edit</a>
+            </div>
+            <div class="footer-links">
+                <h4>Destinations</h4>
+                <a href="#">Bali</a>
+                <a href="#">Dubai</a>
+                <a href="#">Maldives</a>
+                <a href="#">Switzerland</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>hello@wanderly.com</p>
+                <div class="socials">
+                    <a href="#">IG</a> <a href="#">TW</a> <a href="#">PT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Wanderly. All rights reserved.</p>
+            <button id="back-to-top">Back to top &uarr;</button>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal-backdrop">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modal-form-view">
+                <h2>Start Your Journey</h2>
+                <p>Fill out the details below and our concierge will curate your experience.</p>
+                <form id="enquiry-form">
+                    <div class="input-grid">
+                        <input type="text" id="fname" placeholder="Full Name" required>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                        <input type="text" id="target-dest" placeholder="Desired Destination/Package" required readonly>
+                        <input type="date" id="date" required>
+                        <input type="number" id="travellers" placeholder="No. of Travellers" min="1" required>
+                    </div>
+                    <textarea id="prefs" placeholder="Additional Preferences (e.g. dietary requirements, special occasions)..." rows="4"></textarea>
+                    <button type="submit" class="btn-primary full-width">Submit Enquiry</button>
+                </form>
+            </div>
+            <div id="modal-success-view" class="hidden text-center">
+                <h2>Your adventure starts here!</h2>
+                <p>Thank you for choosing Wanderly. Your travel enquiry has been received and our concierge will contact you shortly.</p>
+                <button class="btn-secondary close-modal-btn">Return to site</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Modules -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

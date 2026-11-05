@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+    .editorial-grid { grid-template-columns: repeat(2, 1fr); }
+    .style-1, .style-2, .style-3, .style-4 { grid-column: span 1; margin-top: 0; }
+    .finder-form { grid-template-columns: 1fr 1fr; }
+    .package-row { grid-template-columns: auto 1fr; }
+    .pkg-img { grid-column: 1 / -1; height: 300px; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .nav-links, .navbar .btn-primary { display: none; }
+    .menu-toggle {
+        display: flex; flex-direction: column; gap: 6px; cursor: pointer;
+    }
+    .menu-toggle span { width: 30px; height: 2px; background: var(--ivory); transition: var(--trans-fast); }
+    .navbar.scrolled .menu-toggle span { background: var(--charcoal); }
+    
+    .hero-content { padding: 0 2rem; }
+    .coordinates { display: none; }
+    .hero-actions { flex-direction: column; }
+    
+    .exp-nav { overflow-x: auto; white-space: nowrap; padding-bottom: 1rem; }
+    .exp-display { grid-template-columns: 1fr; }
+    
+    .editorial-grid, .edit-grid, .benefits-grid, .footer-grid { grid-template-columns: 1fr; }
+    
+    .finder-form { grid-template-columns: 1fr; }
+    
+    .input-grid { grid-template-columns: 1fr; }
+    input[id="target-dest"] { grid-column: 1; }
+    .modal-content { padding: 2rem; }
+}
