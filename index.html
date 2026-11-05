@@ -17,17 +17,46 @@
     <!-- Navigation -->
     <header id="main-nav" class="navbar">
         <div class="nav-container">
-            <div class="logo">Wanderly.</div>
-            <nav class="nav-links">
-                <a href="#discover">Discover</a>
+
+            <a href="#hero" class="logo" aria-label="Wanderly Home">
+                Wanderly.
+            </a>
+
+            <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+                <a href="#hero">Home</a>
                 <a href="#destinations">Destinations</a>
-                <a href="#journal">The Edit</a>
-                <a href="#packages">Journeys</a>
+                <a href="#packages">Packages</a>
+                <a href="#why-us">About</a>
+                <a href="#contact">Contact</a>
+
+                <!-- Visible only inside the mobile menu -->
+                <button
+                    class="btn-primary open-modal mobile-plan-btn"
+                    type="button"
+                    data-target="general">
+                    Plan Your Trip
+                </button>
             </nav>
-            <button class="btn-primary open-modal" data-target="general">Plan Your Trip</button>
-            <div class="menu-toggle">
-                <span></span><span></span>
-            </div>
+
+            <!-- Desktop CTA -->
+            <button
+                class="btn-primary open-modal desktop-plan-btn"
+                type="button"
+                data-target="general">
+                Plan Your Trip
+            </button>
+
+            <!-- Mobile menu button -->
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primary-navigation"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
     </header>
 
@@ -39,7 +68,13 @@
             </div>
             <div class="hero-content">
                 <div class="hero-text-wrap">
-                    <h1 class="stagger-text">THE WORLD IS YOURS<br>TO WANDER.</h1>
+                    <h1 class="stagger-text">
+                        THE WORLD IS YOURS<br>TO WANDER.
+                    </h1>
+
+                    <span class="hero-subtitle">
+                        Explore the world, your way.
+                    </span>
                     <p class="fade-up delay-1">Some journeys take you places. Others leave you with stories that last forever. Find the journey that speaks to you.</p>
                 </div>
                 <div class="hero-actions fade-up delay-2">
@@ -142,7 +177,9 @@
                         <div class="edit-content">
                             <h4>Hidden Places Worth Discovering</h4>
                             <p>Step away from the crowds and find solitude in these untouched corners of the earth.</p>
-                            <a href="#" class="read-more">Read Story</a>
+                            <a href="#finder" class="read-more">
+                                Find a Journey Inspired by This
+                            </a>
                         </div>
                     </article>
                     <article class="edit-item fade-up delay-1">
@@ -150,7 +187,9 @@
                         <div class="edit-content">
                             <h4>Where to Travel This Season</h4>
                             <p>Our editor's picks for the perfect climate, fewer crowds, and vibrant local festivals right now.</p>
-                            <a href="#" class="read-more">Read Story</a>
+                            <a href="#finder" class="read-more">
+                                Find a Journey Inspired by This
+                            </a>
                         </div>
                     </article>
                     <article class="edit-item fade-up delay-2">
@@ -158,7 +197,9 @@
                         <div class="edit-content">
                             <h4>Experiences You Shouldn't Miss</h4>
                             <p>From dining under the stars to ancient trail hiking—moments that define a lifetime.</p>
-                            <a href="#" class="read-more">Read Story</a>
+                            <a href="#finder" class="read-more">
+                                Find a Journey Inspired by This
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -199,7 +240,7 @@
                     </div>
                     <button type="submit" class="btn-primary">Find Matches</button>
                 </form>
-                <div id="finder-results" class="finder-results"></div>
+                <div id="finder-results" class="finder-results" aria-live="polite"></div>
             </div>
         </section>
 
@@ -280,8 +321,8 @@
         </section>
 
         <!-- Section H: Final CTA -->
-        <section id="final-cta" class="section-padding bg-forest text-ivory text-center">
-            <div class="container final-cta-wrap fade-up" style="color: wheat;">
+        <section id="final-cta" class="section-padding bg-forest text-light text-center">
+            <div class="container final-cta-wrap fade-up">
                 <h2>THERE'S A WHOLE WORLD WAITING.</h2>
                 <p>Your next unforgettable story is just one journey away.</p>
                 <button class="btn-primary open-modal" data-target="general">Plan Your Trip</button>
@@ -290,7 +331,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer bg-charcoal text-beige">
+    <footer id="contact" class="site-footer bg-charcoal text-beige">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <h3>Wanderly.</h3>
@@ -305,16 +346,18 @@
             </div>
             <div class="footer-links">
                 <h4>Destinations</h4>
-                <a href="#">Bali</a>
-                <a href="#">Dubai</a>
-                <a href="#">Maldives</a>
-                <a href="#">Switzerland</a>
+                <a href="#destinations">Bali</a>
+                <a href="#destinations">Dubai</a>
+                <a href="#destinations">Maldives</a>
+                <a href="#destinations">Switzerland</a>
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
                 <p>hello@wanderly.com</p>
                 <div class="socials">
-                    <a href="#">IG</a> <a href="#">TW</a> <a href="#">PT</a>
+                    <span aria-label="Instagram profile coming soon">IG</span>
+                    <span aria-label="Twitter profile coming soon">TW</span>
+                    <span aria-label="Pinterest profile coming soon">PT</span>
                 </div>
             </div>
         </div>
@@ -325,29 +368,94 @@
     </footer>
 
     <!-- Booking Modal -->
-    <div id="booking-modal" class="modal-backdrop">
+    <div id="booking-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-hidden="true"> 
         <div class="modal-content">
-            <button class="close-modal">&times;</button>
+            <button
+                class="close-modal"
+                type="button"
+                aria-label="Close booking form">
+                &times;
+            </button>
             <div id="modal-form-view">
-                <h2>Start Your Journey</h2>
-                <p>Fill out the details below and our concierge will curate your experience.</p>
+                <h2 id="booking-title">Start Your Journey</h2>
+                <p>
+                    Fill out the details below and our concierge
+                    will curate your experience.
+                </p>
                 <form id="enquiry-form">
                     <div class="input-grid">
-                        <input type="text" id="fname" placeholder="Full Name" required>
-                        <input type="email" id="email" placeholder="Email Address" required>
-                        <input type="tel" id="phone" placeholder="Phone Number" required>
-                        <input type="text" id="target-dest" placeholder="Desired Destination/Package" required readonly>
-                        <input type="date" id="date" required>
-                        <input type="number" id="travellers" placeholder="No. of Travellers" min="1" required>
+                        <input
+                            type="text"
+                            id="fname"
+                            placeholder="Full Name"
+                            aria-label="Full Name"
+                            autocomplete="name"
+                            required>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email Address"
+                            aria-label="Email Address"
+                            autocomplete="email"
+                            required>
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Phone Number"
+                            aria-label="Phone Number"
+                            autocomplete="tel"
+                            pattern="[0-9+() -]{7,20}"
+                            required>
+                        <input
+                            type="text"
+                            id="target-dest"
+                            placeholder="Desired Destination/Package"
+                            aria-label="Desired Destination or Package"
+                            required
+                            readonly>
+                        <input
+                            type="date"
+                            id="date"
+                            aria-label="Travel Date"
+                            required>
+                        <input
+                            type="number"
+                            id="travellers"
+                            placeholder="No. of Travellers"
+                            aria-label="Number of Travellers"
+                            min="1"
+                            max="50"
+                            required>
                     </div>
-                    <textarea id="prefs" placeholder="Additional Preferences (e.g. dietary requirements, special occasions)..." rows="4"></textarea>
-                    <button type="submit" class="btn-primary full-width">Submit Enquiry</button>
+
+                    <textarea
+                        id="prefs"
+                        placeholder="Additional Preferences..."
+                        aria-label="Additional Preferences"
+                        rows="4">
+                    </textarea>
+                    <button
+                        type="submit"
+                        class="btn-primary full-width">
+                        Submit Enquiry
+                    </button>
                 </form>
             </div>
-            <div id="modal-success-view" class="hidden text-center">
+
+            <div
+                id="modal-success-view"
+                class="hidden text-center"
+                aria-live="polite">
                 <h2>Your adventure starts here!</h2>
-                <p>Thank you for choosing Wanderly. Your travel enquiry has been received and our concierge will contact you shortly.</p>
-                <button class="btn-secondary close-modal-btn">Return to site</button>
+                <p>
+                    Thank you for choosing Wanderly.
+                    Your travel enquiry has been received.
+                </p>
+                <button
+                    class="btn-secondary close-modal-btn"
+                    type="button">
+                    Return to site
+                </button>
             </div>
         </div>
     </div>
