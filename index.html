@@ -353,12 +353,17 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
-                <p>hello@wanderly.com</p>
-                <div class="socials">
-                    <span aria-label="Instagram profile coming soon">IG</span>
-                    <span aria-label="Twitter profile coming soon">TW</span>
-                    <span aria-label="Pinterest profile coming soon">PT</span>
-                </div>
+
+                <p>Planning your next adventure?</p>
+
+                <button
+                    class="btn-text open-modal"
+                    data-target="general"
+                    type="button">
+                    Get in Touch →
+                </button>
+
+                <div class="socials" style="margin-top: 10px;"></div>
             </div>
         </div>
         <div class="footer-bottom container">
@@ -444,18 +449,54 @@
 
             <div
                 id="modal-success-view"
-                class="hidden text-center"
+                class="enquiry-success hidden"
                 aria-live="polite">
-                <h2>Your adventure starts here!</h2>
-                <p>
-                    Thank you for choosing Wanderly.
-                    Your travel enquiry has been received.
+
+                <div class="success-icon">
+                    <span>✓</span>
+                </div>
+
+                <span class="success-eyebrow">YOUR JOURNEY BEGINS HERE</span>
+
+                <h2>Thank you for choosing Wanderly.</h2>
+
+                <p class="success-description">
+                    Your travel enquiry has been saved successfully.
+                    We've prepared a copy of your enquiry details for your records.
                 </p>
+
+                <div class="receipt-preview">
+                    <div class="receipt-preview-top">
+                        <span>WANDERLY</span>
+                        <span>TRAVEL ENQUIRY</span>
+                    </div>
+
+                    <div class="receipt-reference">
+                        <span>ENQUIRY REFERENCE</span>
+                        <strong id="success-reference">WDR-000000</strong>
+                    </div>
+
+                    <p>Your enquiry receipt is ready to download.</p>
+                </div>
+
                 <button
-                    class="btn-secondary close-modal-btn"
+                    id="download-enquiry-pdf"
+                    class="btn-primary full-width"
+                    type="button">
+                    <span>Download PDF Receipt</span>
+                    <span aria-hidden="true">↓</span>
+                </button>
+
+                <button
+                    class="btn-text close-modal-btn success-return"
                     type="button">
                     Return to site
                 </button>
+
+                <p class="success-disclaimer">
+                    This document confirms your enquiry submission only.
+                    It is not a confirmed travel booking.
+                </p>
             </div>
         </div>
     </div>

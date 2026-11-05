@@ -65,51 +65,52 @@ function initDiscoveryFeature() {
 
     };
 
+    // Preload all four experience images
+    Object.values(experiencesData).forEach((experience) => {
+        const img = new Image();
+        img.src = experience.img;
+    });
+
 
     function renderExperience(type) {
-
         const data = experiencesData[type];
 
         if (!data) return;
 
-        display.style.opacity = '0';
+        // Immediately replace the content
+        display.innerHTML = `
+            <div class="exp-text">
+                <h3>${data.title}</h3>
 
-        setTimeout(() => {
+                <p>${data.text}</p>
 
-            display.innerHTML = `
+                <button
+                    class="btn-text open-modal"
+                    data-target="Experience: ${type}"
+                    type="button">
+                    Curate This Experience
+                </button>
+            </div>
 
-                <div class="exp-text">
+            <div class="exp-img img-zoom">
+                <img
+                    src="${data.img}"
+                    alt="${data.title}"
+                    loading="eager"
+                    decoding="async"
+                    width="800"
+                    height="600">
+            </div>
+        `;
 
-                    <h3>${data.title}</h3>
+        // Restart the entrance animation on every tab switch
+        display.classList.remove('experience-enter');
 
-                    <p>${data.text}</p>
+        // Force browser to register the animation reset
+        void display.offsetWidth;
 
-                    <button
-                        class="btn-text open-modal"
-                        data-target="Experience: ${type}"
-                        type="button">
-
-                        Curate This Experience
-
-                    </button>
-
-                </div>
-
-                <div class="exp-img img-zoom">
-
-                    <img
-                        src="${data.img}"
-                        alt="${data.title}"
-                        loading="lazy">
-
-                </div>
-
-            `;
-
-            display.style.opacity = '1';
-
-        }, 250);
-
+        // Trigger the animation
+        display.classList.add('experience-enter');
     }
 
 

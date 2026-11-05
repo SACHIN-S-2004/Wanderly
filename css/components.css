@@ -426,3 +426,240 @@ input[id="target-dest"] { grid-column: span 2; background: #f0f0f0; }
 .editorial-grid .story-meta {
     padding-top: 1.25rem;
 }
+
+
+/* =====================================
+   WANDERLY — ENQUIRY SUCCESS SCREEN
+===================================== */
+
+.enquiry-success {
+    text-align: center;
+    padding: 1.5rem 0 0;
+    animation: enquiryReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes enquiryReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    width: 58px;
+    height: 58px;
+    border: 1px solid rgba(24, 59, 53, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--forest);
+    font-size: 1.6rem;
+}
+
+.success-eyebrow {
+    display: block;
+    color: var(--terracotta);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    margin-bottom: 1rem;
+}
+
+.enquiry-success h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--forest);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.success-description {
+    max-width: 410px;
+    margin: 0 auto 2rem;
+    color: #77766f;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Receipt preview */
+
+.receipt-preview {
+    background: #EFEEE7;
+    border: 1px solid #E2DFD4;
+    padding: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.receipt-preview-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #D8D5C9;
+}
+
+.receipt-preview-top span:first-child {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--forest);
+}
+
+.receipt-preview-top span:last-child {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: #85847B;
+}
+
+.receipt-reference {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.receipt-reference span {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: #77766F;
+}
+
+.receipt-reference strong {
+    font-size: 0.85rem;
+    color: var(--terracotta);
+    letter-spacing: 0.05em;
+}
+
+.receipt-preview > p {
+    margin: 0.8rem 0 0;
+    font-size: 0.8rem;
+    color: #77766F;
+}
+
+/* Download button */
+
+#download-enquiry-pdf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.15rem 1.4rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+}
+
+#download-enquiry-pdf span:last-child {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+#download-enquiry-pdf:hover span:last-child {
+    transform: translateY(3px);
+}
+
+#download-enquiry-pdf:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success-return {
+    margin: 1.5rem auto 0;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+
+.success-disclaimer {
+    margin: 1.8rem auto 0;
+    max-width: 400px;
+    color: #99968D;
+    font-size: 0.72rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .enquiry-success {
+        padding-top: 1rem;
+    }
+
+    .receipt-preview {
+        padding: 1rem;
+    }
+
+    .receipt-reference {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+
+/* ==========================================
+   DISCOVER BY EXPERIENCE — TAB ANIMATION
+========================================== */
+
+/* Text entrance */
+#exp-display.experience-enter .exp-text {
+    animation: experienceTextEnter 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Image entrance */
+#exp-display.experience-enter .exp-img {
+    animation: experienceImageEnter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#exp-display.experience-enter .exp-img img {
+    animation: experienceImageZoom 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Text: fade + upward movement */
+@keyframes experienceTextEnter {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image container: subtle reveal */
+@keyframes experienceImageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image: gentle zoom-out */
+@keyframes experienceImageZoom {
+    from {
+        opacity: 0.7;
+        transform: scale(1.07);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    #exp-display.experience-enter .exp-text,
+    #exp-display.experience-enter .exp-img,
+    #exp-display.experience-enter .exp-img img {
+        animation: none;
+    }
+}
