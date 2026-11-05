@@ -18,6 +18,18 @@
     --trans-fast: 0.3s ease;
 }
 
+/* Refined desktop proportions */
+@media (min-width: 1201px) {
+    html {
+        font-size: 80%;
+    }
+
+    .container {
+        max-width: 1500px;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +39,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     font-family: var(--font-body);

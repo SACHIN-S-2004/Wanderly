@@ -15,7 +15,7 @@ technologies.
 
 ## Live Preview
 
--   **Live website:** `ADD_YOUR_DEPLOYED_URL`
+-   **Live website:** `https://wanderly-travel-co.netlify.app/`
 -   **GitHub repository:** `https://github.com/SACHIN-S-2004/Wanderly.git`
 
 Replace these placeholders with the final public URLs after deployment.
@@ -254,8 +254,8 @@ external asset before using the project commercially.
 
 ## Author
 
-**Name:** `ADD_YOUR_NAME`\
-**GitHub:** `ADD_YOUR_GITHUB_PROFILE_URL`
+**Name:** `SACHIN SURESH`\
+**GitHub:** `https://github.com/SACHIN-S-2004`
 
 ------------------------------------------------------------------------
 
