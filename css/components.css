@@ -83,7 +83,7 @@
 }
 .nav-links a {
     text-decoration: none;
-    color: var(--ivory);
+    color: #48453e;
     font-weight: 500;
     transition: var(--trans-fast);
 }
@@ -207,12 +207,6 @@
     transform: scale(1.05);
 }
 
-/* EDITORIAL GRID (Destinations) */
-.editorial-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
-}
 .story-card { position: relative; }
 .story-card h3 { font-size: 2.5rem; margin-top: 1.5rem; }
 .style-1 { grid-column: 1 / 7; }
@@ -383,4 +377,52 @@ input[id="target-dest"] { grid-column: span 2; background: #f0f0f0; }
     color: var(--beige);
     opacity: 0.8;
     font-size: 0.9rem;
+}
+
+/* =====================================
+   DESTINATION EDITORIAL GRID
+===================================== */
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+    align-items: start;
+}
+
+/* Reset individual card sizing */
+.editorial-grid .story-card {
+    grid-column: auto;
+    margin-top: 0;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Consistent image proportions */
+.editorial-grid .story-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Image fills the frame without distortion */
+.editorial-grid .story-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s ease;
+}
+
+/* Hover effect */
+.editorial-grid .story-card:hover .story-img img {
+    transform: scale(1.06);
+}
+
+/* Text spacing */
+.editorial-grid .story-meta {
+    padding-top: 1.25rem;
 }

@@ -60,7 +60,7 @@ function initDiscoveryFeature() {
 
             text: "Ancient architecture, vibrant bazaars, and timeless traditions. Connect with the human heritage that shapes our world.",
 
-            img: "https://images.unsplash.com/photo-1518349635034-7a32d1844b26?auto=format&fit=crop&w=800&q=80"
+            img: "https://iasgyan.sgp1.cdn.digitaloceanspaces.com/images/sun_onara.png?auto=format&fit=crop&w=800&q=80"
         }
 
     };
@@ -173,7 +173,7 @@ function initJourneyFinder() {
             price: 45000,
             duration: 5,
             package: "Island Escape - Maldives",
-            image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=500&q=80"
+            image: "https://gos3.ibcdn.com/cde5573225a011ec89170a58a9feac02.jpg?auto=format&fit=crop&w=500&q=80"
         },
 
         {
